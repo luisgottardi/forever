@@ -1,0 +1,31 @@
+{
+  "name": "forever",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "scss": "node-sass --output-style compressed -o dist/css src/scss",
+    "serve": "browser-sync start --server 'dist/' --files 'dist/css/style.css, **/*.html'",
+    "watch:css": "onchange 'src/scss' -- npm run scss",
+    "watch:html": "onchange 'src/*.html' -- npm run copy",
+    "copy": "cp -R src/imgs dist/ && cp -R src/*.html dist/ && cp -R src/js dist/",
+    "start": "run-p serve watch:css watch:html",
+    "build": "yarn scss && yarn copy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luisgottardi/forever.git"
+  },
+  "author": "Luis Gottardi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luisgottardi/forever/issues"
+  },
+  "homepage": "https://github.com/luisgottardi/forever#readme",
+  "devDependencies": {
+    "browser-sync": "^2.27.5",
+    "node-sass": "^6.0.1",
+    "onchange": "^7.1.0",
+    "yarn-run-all": "^3.1.1"
+  }
+}
