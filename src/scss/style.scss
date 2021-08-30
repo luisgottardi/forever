@@ -8,7 +8,7 @@
   background: url('../imgs/background.jpg') no-repeat;
   background-size: cover;
   background-position: center;
-  padding: 75px 0px 50px 0px;
+  padding: 80px 0px 30px 0px;
   position: relative;
 
   .position-relative{
@@ -31,10 +31,7 @@
   }
 
   .row{
-    height: 100%;
-    z-index: 10;
     .col-12{
-      height: 100%;
       padding: 0px 15px;
     }
     .content{
@@ -42,7 +39,6 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      height: 100%;
   
       img{
         width: 200px;
@@ -93,9 +89,8 @@
 
       .description2{
         color: #fff;
-        font-weight: bold;
         font-family: Montserrat;
-        font-size: 1.2rem;
+        font-size: 1rem;
         padding-bottom: 30px;
         text-align: center;
       }
@@ -135,7 +130,6 @@
           // font-weight: bold;
           font-family: Montserrat;
           font-size: 1rem;
-          padding-bottom: 30px;
           list-style: none;
           text-align: center;
         }
